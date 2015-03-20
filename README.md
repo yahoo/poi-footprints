@@ -6,17 +6,18 @@ This repository contains the supplemental material (dataset) for the
 paper "Finding Social Points of Interest from Georeferenced and
 Oriented Online Photographs" by Bart Thomee, Ioannis Arapakis, David
 A. Shamma, currently under submission to _ACM Transactions on
-Multimedia Computing, Communications and Applications_. The dataset is
-supplied as a set of ```R``` scripts; each script contains the
+Multimedia Computing, Communications and Applications_.
+
+The dataset is supplied as a set of ```R``` scripts; each script contains the
 bounding region of a POI and will render the spatial footprint inside
 as a HTML page in an invoked browser window. In total, there are 105
 footprints from various points of interest around the world that were
-used as ground truth of the experiments described in the paper.  The
+used as ground truth of the experiments described in the paper. The
 footprints themselves are represented inside the scripts as
 [GeoJSON multi-polygons][1], since this enables regions to be
 specified that can consist of more than one polygon that may also
 contain holes (see for example the spatial footprint of the Louvre,
-Paris).
+Paris below).
 
 ## Dependencies ##
 
@@ -26,7 +27,7 @@ Paris).
 ## Usage ##
 
 Source the desired footprint's ```R``` file into memory (dependencies
-will be called automatically).  Then calling the ```map``` variable
+will be called automatically). Then calling the ```map``` variable
 will launch the footprint in your default browser.
 
 Within R:
