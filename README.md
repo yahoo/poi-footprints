@@ -16,8 +16,11 @@ used as ground truth of the experiments described in the paper. The
 footprints themselves are represented inside the scripts as
 [GeoJSON multi-polygons][1], since this enables regions to be
 specified that can consist of more than one polygon that may also
-contain holes (see for example the spatial footprint of the Louvre,
-Paris below).
+contain holes (see for example the spatial footprint below).
+
+![Comparison between how Google Maps (left) represents the Louvre and its actual spatial footprint (right)](example.jpg)
+
+The Musée du Louvre is only represented as a single geographic coordinate by Google Maps (left), whereas in reality it actually covers a relatively large area. Its geographic footprint (right) consists of two polygons, of which one (the pyramid, shown in magenta) is convex and the other (the palace, shown in orange) is concave and contains multiple holes
 
 ## Dependencies ##
 
@@ -33,7 +36,8 @@ will launch the footprint in your default browser.
 Within R:
 
 ```R
-source("footprints/Louvre.R")
+setwd("footprints")
+source("Louvre.R")
 map
 ```
 
