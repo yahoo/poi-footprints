@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(54.48830955,-0.60749225), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-0.6082005,54.488308],[-0.6081646,54.4884409],[-0.6079125,54.4884179],[-0.6075189,54.4883821],[-0.6074911,54.4884849],[-0.6073197,54.4884693],[-0.6073469,54.4883684],[-0.606784,54.4883171],[-0.60682,54.4881839],[-0.6073668,54.4882337],[-0.6073937,54.4881342],[-0.6075659,54.4881499],[-0.6075395,54.4882478],[-0.6079483,54.488285],[-0.6082005,54.488308]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'orange', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('Whitby Abbey.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map

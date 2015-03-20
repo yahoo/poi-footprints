@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(51.50749545,-0.09931875), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-0.1005582,51.5075594],[-0.1005449,51.5076924],[-0.1005169,51.5079077],[-0.1005076,51.5079806],[-0.099409,51.5079191],[-0.0994047,51.5079489],[-0.0993236,51.5079442],[-0.0992422,51.5079389],[-0.099246,51.5079088],[-0.098144,51.5078601],[-0.098154,51.5077974],[-0.0982249,51.5073514],[-0.0982269,51.5073189],[-0.0980707,51.5073121],[-0.0981095,51.5070103],[-0.0983001,51.5070214],[-0.0982852,51.5071813],[-0.098713,51.5072079],[-0.1001356,51.5072879],[-0.1005184,51.5073063],[-0.1005061,51.507454],[-0.1005668,51.5074569],[-0.1005582,51.5075594]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'cyan', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('Tate Modern.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map

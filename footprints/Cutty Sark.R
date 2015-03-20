@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(51.4828438,-0.00957175), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-0.0097107,51.4831375],[-0.0097268,51.4831054],[-0.0097336,51.4830617],[-0.0097242,51.4830086],[-0.0096417,51.4828047],[-0.0095326,51.4825885],[-0.0095071,51.4825606],[-0.0094765,51.4825501],[-0.0094453,51.4825524],[-0.0094217,51.4825647],[-0.0094099,51.482581],[-0.0094155,51.4826109],[-0.0095038,51.4828295],[-0.0095981,51.4830283],[-0.0096344,51.4830789],[-0.0096741,51.4831147],[-0.0097107,51.4831375]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'cyan', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('Cutty Sark.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map

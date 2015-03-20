@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(44.4604118,-110.8279791), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-110.82791616937254,44.4604118],[-110.82792095968134,44.460428988518814],[-110.82793460132659,44.46044356024146],[-110.82795501749148,44.46045329675524],[-110.8279791,44.46045671576421],[-110.82800318250851,44.46045329675524],[-110.8280235986734,44.46044356024146],[-110.82803724031865,44.460428988518814],[-110.82804203062744,44.4604118],[-110.82803724031865,44.46039461148119],[-110.8280235986734,44.46038003975855],[-110.82800318250851,44.460370303244765],[-110.8279791,44.460366884235796],[-110.82795501749148,44.460370303244765],[-110.82793460132659,44.46038003975855],[-110.82792095968134,44.46039461148119],[-110.82791616937254,44.4604118]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'orange', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('Old Faithful Geyser.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map

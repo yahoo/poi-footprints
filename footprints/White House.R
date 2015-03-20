@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(38.897700400000005,-77.0365531), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-77.0362527,38.8975971],[-77.036253,38.8975568],[-77.036448,38.8975572],[-77.0364588,38.897533],[-77.0364843,38.8975092],[-77.036519,38.897494],[-77.0365584,38.8974898],[-77.036606,38.8975004],[-77.0366426,38.8975264],[-77.0366586,38.8975548],[-77.0366597,38.8975576],[-77.036854,38.897558],[-77.0368539,38.8975964],[-77.0368535,38.8977018],[-77.0368532,38.897796],[-77.0366432,38.8977956],[-77.036643,38.897911],[-77.0364547,38.8979108],[-77.0364549,38.8977952],[-77.0362522,38.8977947],[-77.0362531,38.897696],[-77.0362527,38.8975971]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'magenta', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('White House.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map

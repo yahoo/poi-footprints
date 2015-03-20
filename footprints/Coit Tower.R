@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(37.8023733,-122.40583290000001), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-122.4059294,37.8024517],[-122.4058034,37.8024782],[-122.4057953,37.8024559],[-122.4057605,37.8024623],[-122.4057538,37.80244],[-122.4057377,37.8024432],[-122.4057176,37.8024167],[-122.4057068,37.8023796],[-122.4057055,37.8023426],[-122.4057176,37.8023362],[-122.4057108,37.802315],[-122.4057484,37.8023055],[-122.4057444,37.8022938],[-122.4057712,37.80228],[-122.4058181,37.8022684],[-122.4058637,37.8022694],[-122.4058679,37.8022811],[-122.405904,37.8022726],[-122.4059147,37.8023012],[-122.4059254,37.802298],[-122.4059415,37.8023192],[-122.405959,37.8023394],[-122.4059603,37.8023701],[-122.4059536,37.8023966],[-122.4059442,37.8023987],[-122.4059522,37.8024231],[-122.4059227,37.8024294],[-122.4059294,37.8024517]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'magenta', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('Coit Tower.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map

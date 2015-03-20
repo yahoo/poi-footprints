@@ -2,7 +2,6 @@ library(rCharts)
 map <- Leaflet$new()
 map$setView(c(43.77311655,11.25657655), zoom = 17)
 map$tileLayer(provider = 'Stamen.Toner')
-json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[11.2556144,43.7733644],[11.2556099,43.77325],[11.2556072,43.7730542],[11.2556086,43.7729386],[11.2566274,43.7729215],[11.2566283,43.7729054],[11.2566755,43.7728737],[11.2567043,43.7728696],[11.2567026,43.7727874],[11.2568427,43.7726839],[11.2570357,43.7726794],[11.2571605,43.7727768],[11.2571604,43.7728734],[11.2572033,43.772873],[11.257274,43.7729143],[11.2572752,43.7729452],[11.2574068,43.7729475],[11.2575376,43.7730412],[11.2575459,43.7731799],[11.2574186,43.7732788],[11.2572792,43.7732819],[11.2572765,43.7733296],[11.2572227,43.773372],[11.2571861,43.7733723],[11.2571889,43.7734518],[11.257059,43.7735473],[11.256865,43.7735537],[11.256738,43.7734653],[11.2567348,43.7733838],[11.256678,43.7733806],[11.2566267,43.7733533],[11.2566167,43.7733344],[11.2556144,43.7733644]]]]}}]}'
-polygons = RJSONIO::fromJSON(json)
-map$geoJson(polygons, style = "#! function(feature) { return { color: 'magenta', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+polygons = RJSONIO::fromJSON('Basilica di Santa Maria.json')
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'green', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
 map
