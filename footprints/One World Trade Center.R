@@ -1,0 +1,8 @@
+library(rCharts)
+map <- Leaflet$new()
+map$setView(c(40.713003799999996,-74.01318645), zoom = 17)
+map$tileLayer(provider = 'Stamen.Toner')
+json = '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"MultiPolygon","coordinates":[[[[-74.0136591,40.7128576],[-74.0136709,40.7128815],[-74.0136828,40.7129055],[-74.0133683,40.7133685],[-74.0133323,40.7133745],[-74.0132963,40.7133806],[-74.0127178,40.71315],[-74.012704,40.713127],[-74.0126901,40.7131039],[-74.0130047,40.7126408],[-74.0130425,40.7126339],[-74.0130805,40.712627],[-74.0136591,40.7128576]]]]}}]}'
+polygons = RJSONIO::fromJSON(json)
+map$geoJson(polygons, style = "#! function(feature) { return { color: 'orange', strokeWidth: '1px', strokeOpacity: 0.8, fillOpacity: 0.8 }; } !#")
+map
