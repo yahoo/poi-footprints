@@ -19,13 +19,18 @@ Source the desired footprint's ```R``` file into memory (dependencies
 will be called automatically). Then calling the ```map``` variable
 will launch the footprint in your default browser.
 
-Within R:
+### Making Footprints in R ###
+
+Within ```R```:
 
 ```R
 setwd("footprints")
 source("Louvre.R")
 map
 ```
+### JSON ###
+
+Inside the ```footprints``` directory is a list of POIs as global ```JSON``` coordinates plus the R code to generate that region in an HTML page (see above).
 
 ## Copyright and license ##
 
