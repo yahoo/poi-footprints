@@ -4,7 +4,8 @@
 
 This repository contains the supplemental material (dataset) for the paper "Finding Social Points of Interest from Georeferenced and Oriented Online Photographs" by Bart Thomee, Ioannis Arapakis, David A. Shamma, currently under submission to _ACM Transactions on Multimedia Computing, Communications and Applications_.
 
-##  Dataset ## 
+##  Dataset ##
+
 The dataset is supplied as a set of ```R``` scripts and accompanying ```JSON``` objects. Each object represents the spatial footprint of a POI, and the script will render this region as a HTML page in an invoked browser window. In total, there are 105 footprints from various points of interest (POIs) around the world that were used as ground truth of the experiments described in the paper. The ```JSON``` objects are expressed as [GeoJSON multi-polygons][1], because this allows regions to be specified that can consist of more than one polygon and that may also contain holes. For example, while in the image below the Musée du Louvre is only represented as a single geographic coordinate by Google Maps (left), in reality it actually covers a relatively large area: its geographic footprint (right) consists of two polygons, of which one (the pyramid, shown in magenta) is convex and the other (the palace, shown in orange) is concave and contains multiple holes.
 
 <p align="center"><img src="example.jpg" alt="Comparison between how Google Maps (left) represents the Louvre and its actual spatial footprint (right)" /></p>
