@@ -6,7 +6,7 @@ This repository contains the supplemental material (dataset) for the paper "Find
 
 ##  Dataset ##
 
-In total, there are 105 footprints from various points of interest (POIs) around the world that were used as ground truth of the experiments described in the paper.
+In total, the dataset contains 105 footprints from various points of interest (POIs) around the world, which were used as ground truth of the experiments described in the paper.
 
 The dataset is supplied as a set of ```R``` scripts and accompanying ```JSON``` objects. Each object represents the spatial footprint of a POI, and the script will render this region as a HTML page in an invoked browser window. The ```JSON``` objects are expressed as [GeoJSON multi-polygons][1], because this allows regions to be specified that can consist of more than one polygon that may also contain holes.
 
